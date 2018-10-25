@@ -8,18 +8,18 @@ function updateDriverWithKeyAndValue(driver, key, value) {
 }
 
 function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
-  driver.address = '12 Broadway'
+  driver[key] = value
   return driver
 }
 
 function deleteFromDriverByKey(driver, key) {
   const driverCopy = {...driver}
-  delete driverCopy.name
+  delete driverCopy.key
   return driverCopy
 }
 
 function destructivelyDeleteFromDriverByKey(driver, key) {
-  delete driver.name
+  delete driver.key
   return driver
 }
 
